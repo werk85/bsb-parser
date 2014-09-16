@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="../dist/bsb-parser.min.js"></script>
+</head>
+<body>
+	<input type="file" id="file" name="file" />
+	<output id="output"></output>
+
+	<script>
+		function handleFileSelect(evt) {
+			var file = evt.target.files[0]; // FileList object
+
+			// files is a FileList of File objects. List some properties.
+			bsbParser.fromFile(file, function (err, bsb) {
+				var result = err || bsb;
+				document.getElementById('output').innerHTML = '<pre>' + JSON.stringify(result, null, '  ') + '</pre>';
+			});
+		}
+
+		document.getElementById('file').addEventListener('change', handleFileSelect, false);
+	</script>
+</body>
+</html>
