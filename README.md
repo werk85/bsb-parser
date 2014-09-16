@@ -47,11 +47,11 @@ var bsbParser = require('bsb-parser');
 bsbParser.parse('I am an extracted header');
 
 // Or if you want to extract the content by the this lib
-bsbParser.fromFile('path/to/file.kap', function (err, obj) {
+bsbParser.parseFile('path/to/file.kap', function (err, obj) {
     // All attributes are added to obj
 });
 ```
 
 # Example
 
-If you want to see the library in action open the `example/index.html` in your browser.
+If you want to see the library in action open the `dist/index.html` in your browser.
