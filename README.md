@@ -28,7 +28,7 @@ Or as standalone version include the `dist/bsb-parser.js` or `dist/bsb-parser.mi
 
 ### Usage
 
-The bsb-parser is BSB compatible and support the HTML5 Filereader API. See `example/index.html` for a usage example.
+The bsb-parser is BSB compatible and support the HTML5 Filereader API. See `dist/index.html` for a usage example.
 
 ## Node
 
