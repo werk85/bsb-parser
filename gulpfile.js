@@ -20,13 +20,13 @@ gulp.task('peg', function () {
 		.pipe(gulp.dest('./build'));
 });
 
-gulp.task('default', ['peg'], function () {
+gulp.task('build', ['peg'], function () {
 	return bundle()
 		.pipe(source('bsb-parser.js'))
 		.pipe(gulp.dest('./dist'));
 });
 
-gulp.task('dist', ['peg', 'default'], function () {
+gulp.task('dist', ['peg', 'build'], function () {
 	return bundle()
 		.pipe(source('bsb-parser.min.js'))
 		.pipe(streamify(uglify()))
@@ -39,5 +39,7 @@ gulp.task('deploy', ['dist'], function () {
 });
 
 gulp.task('watch', function () {
-	gulp.watch('lib/**', ['default']);
+	gulp.watch('lib/**', ['build']);
 });
+
+gulp.task('default', ['build']);
