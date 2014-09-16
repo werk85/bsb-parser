@@ -15,7 +15,8 @@
   "keywords": [
     "bsb",
     "kap",
-    "parser"
+    "parser",
+    "peg"
   ],
   "license": "MIT",
   "ignore": [

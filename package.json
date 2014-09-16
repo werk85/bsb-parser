@@ -19,6 +19,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [
+    "bsb",
+    "kap",
+    "parser",
+    "peg"
+  ],
   "author": "Malte Legenhausen <legenhausen@werk85.de>",
   "license": "MIT",
   "browser": {
