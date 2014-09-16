@@ -1,0 +1,29 @@
+{
+  "name": "bsb-parser",
+  "main": "dist/bsb-parser.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/werk85/bsb-parser",
+  "authors": [
+    "Malte Legenhausen <legenhausen@werk85.de>"
+  ],
+  "description": "BSB/KAP Parser",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "bsb",
+    "kap",
+    "parser"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "dist/index.html",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

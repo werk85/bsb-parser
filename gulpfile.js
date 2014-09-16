@@ -1,4 +1,5 @@
 var browserify = require('browserify');
+var deploy = require('gulp-gh-pages');
 var gulp = require('gulp');
 var peg = require('gulp-peg');
 var uglify = require('gulp-uglify');
@@ -30,6 +31,11 @@ gulp.task('dist', ['peg', 'default'], function () {
 		.pipe(source('bsb-parser.min.js'))
 		.pipe(streamify(uglify()))
 		.pipe(gulp.dest('./dist'));
+});
+
+gulp.task('deploy', ['dist'], function () {
+	return gulp.src(['./dist/*'])
+		.pipe(deploy());
 });
 
 gulp.task('watch', function () {
