@@ -14,7 +14,7 @@
 			var file = evt.target.files[0]; // FileList object
 
 			// files is a FileList of File objects. List some properties.
-			bsbParser.fromFile(file, function (err, bsb) {
+			bsbParser.parseFile(file, function (err, bsb) {
 				var result = err || bsb;
 				document.getElementById('output').innerHTML = '<pre>' + JSON.stringify(result, null, '  ') + '</pre>';
 			});
